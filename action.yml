@@ -1,5 +1,5 @@
 name: 'PullPrompt'
-description: 'A GitHub Actions that comments on a pull request with a user given prompt and uses the Google Gemini API to generate a response'
+description: 'Comments on pr using a user-defined prompt, generating responses via the Google Gemini API'
 author: "Pradumna Saraf"
 
 inputs:
