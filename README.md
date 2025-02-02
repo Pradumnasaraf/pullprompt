@@ -45,6 +45,10 @@ jobs:
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }} # Required
 ```
 
+## Example
+
+![action demo screenshot](https://github.com/user-attachments/assets/3c88ab21-61a1-4fe7-b5ef-211c8e60e577)
+
 ## Contributing
 
 If you have suggestions for how pullprompt could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
