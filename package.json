@@ -1,6 +1,6 @@
 {
   "name": "pullprompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "build": "npx ncc build src/index.js",
@@ -32,5 +32,4 @@
     "lint-staged": "^15.4.3",
     "prettier": "^3.4.2"
   }
-  
 }
