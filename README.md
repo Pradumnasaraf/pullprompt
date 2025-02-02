@@ -8,7 +8,7 @@ The Action takes three inputs:
 
 1. `github-token` - Required. The GitHub token to use for authentication.
 2. `user-prompt` - Optional. The prompt to generate the text. Default is "Share an open-source tip in 2 to 3 lines to help developers improve their workflow". You will find that in the `action.yml` file.
-3. `gemini-api-key` - Required. The Gemini API key to use for authentication an to interact with the API to generate the text.
+3. `gemini-api-key` - Required. The Gemini API key to use for authentication an to interact with the API to generate the text. You can do that by visiting the [Gemini API](https://ai.google.dev/gemini-api/docs/api-key) page. Once you have the API key, you can add it to your repository secrets. You can do that by going to the repository settings and then to the secrets tab. Add a new secret with the name `GEMINI_API_KEY` and the value as the API key.
 
 The nature of action is to only work on pull requests. It will not work on any other event. 
 
