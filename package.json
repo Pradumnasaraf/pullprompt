@@ -1,0 +1,36 @@
+{
+  "name": "pullprompt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx ncc build src/index.js",
+    "prepare": "husky install",
+    "format": "prettier --write **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pradumnasaraf/GHA.git"
+  },
+  "author": "Pradumnasaraf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pradumnasaraf/GHA/issues"
+  },
+  "homepage": "https://github.com/Pradumnasaraf/GHA#readme",
+  "description": "",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@google/generative-ai": "^0.21.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@vercel/ncc": "^0.38.3",
+    "globals": "^15.14.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2"
+  }
+  
+}

@@ -1,0 +1,25 @@
+name: 'Hello World JS Action'
+description: 'Greet someone and record the time'
+author: "Pradumna Saraf"
+
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
+  user-prompt:
+    description: 'Who to greet'
+    required: false
+    default: 'Share an open-source tip in 2 to 3 lines to help developers improve their workflow'
+  gemini-api-key:
+    description: 'Your Gemini API Key'
+    required: true
+
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: message-circle
+  color: 'green'
+
