@@ -1,5 +1,5 @@
-name: 'Hello World JS Action'
-description: 'Greet someone and record the time'
+name: 'PullPrompt'
+description: 'A GitHub Actions that comments on a pull request with a user given prompt and uses the Google Gemini API to generate a response'
 author: "Pradumna Saraf"
 
 inputs:
@@ -13,7 +13,6 @@ inputs:
   gemini-api-key:
     description: 'Your Gemini API Key'
     required: true
-
 
 runs:
   using: 'node20'

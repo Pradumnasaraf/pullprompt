@@ -43,9 +43,6 @@ node_modules/
 jspm_packages/
 
 
-#
-src/
-
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
@@ -93,6 +90,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
+local-test/
 
 
 # Gatsby files
