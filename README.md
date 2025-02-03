@@ -7,9 +7,10 @@
 The Action takes three inputs:  
 
 1. **`github-token`** (Required) – The GitHub token used for authentication.  
-2. **`user-prompt`** (Optional) – The prompt used to generate the text. The default is:  
    *"Share an open-source tip in 2 to 3 lines to help developers improve their workflow."* You can find this in the `action.yml` file.  
-3. **`gemini-api-key`** (Required) – The Gemini API key used for authentication and text generation. You can obtain it from the [Gemini API](https://ai.google.dev/gemini-api/docs/api-key) page.  
+2. **`gemini-api-key`** (Required) – The Gemini API key used for authentication and text generation. You can obtain it from the [Gemini API](https://ai.google.dev/gemini-api/docs/api-key) page.  
+3. **`user-prompt`** (Optional) – The prompt used to generate the text. The default is:  
+4. **`character-limit`** (Optional) – The character limit for the generated text. The default is 300.
 
 ### **Setting up the API Key**  
 Once you have the API key, add it to your repository secrets:  
@@ -50,8 +51,9 @@ jobs:
         uses: Pradumnasaraf/pullprompt@v1.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Required
-          user-prompt: "Write your prompt here" # Optional
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }} # Required
+          user-prompt: "Write your prompt here" # Optional
+          character-limit: 450 # Optional
 ```
 
 ## Example  
