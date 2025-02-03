@@ -1,3 +1,8 @@
+[![release][release-badge]][release]
+[![releases-ci][releases-ci-badge]][releases-ci]
+[![build-ci][build-ci-badge]][build-ci]
+[![actions-marketplace][actions-marketplace-badge]][actions-marketplace]
+
 ## About (PullPrompt)
 
 **PullPrompt** comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google’s Gemini API to generate the text.  
@@ -83,3 +88,14 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE).
 ## Security  
 
 For information on reporting security vulnerabilities, please refer to the [Security Policy](SECURITY.md).  
+
+
+
+[release]: https://github.com/Pradumnasaraf/pullprompt/releases
+[release-badge]: https://img.shields.io/github/v/release/Pradumnasaraf/pullprompt
+[releases-ci]: https://github.com/Pradumnasaraf/pullprompt/actions/workflows/releases.yml
+[releases-ci-badge]: https://github.com/Pradumnasaraf/pullprompt/actions/workflows/releases.yml/badge.svg
+[build-ci]: https://github.com/Pradumnasaraf/pullprompt/actions/workflows/ci.yml
+[build-ci-badge]: https://github.com/Pradumnasaraf/pullprompt/actions/workflows/ci.yml/badge.svg
+[actions-marketplace]: https://github.com/marketplace/actions/pullprompt
+[actions-marketplace-badge]: https://img.shields.io/badge/marketplace-PullPrompt-blue?&logo=github
