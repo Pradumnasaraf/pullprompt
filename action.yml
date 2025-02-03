@@ -4,15 +4,19 @@ author: "Pradumna Saraf"
 
 inputs:
   github-token:
-    description: 'GitHub token'
+    description: 'GitHub token for authentication'
+    required: true
+  gemini-api-key:
+    description: 'API key for the Google Gemini API'
     required: true
   user-prompt:
-    description: 'Who to greet'
+    description: 'A user-defined prompt for the comment'
     required: false
     default: 'Share an open-source tip in 2 to 3 lines to help developers improve their workflow'
-  gemini-api-key:
-    description: 'Your Gemini API Key'
-    required: true
+  character-limit:
+    description: 'Character limit for the response'
+    required: false
+    default: "300"
 
 runs:
   using: 'node20'
@@ -21,4 +25,3 @@ runs:
 branding:
   icon: message-circle
   color: 'green'
-

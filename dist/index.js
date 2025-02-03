@@ -33154,7 +33154,8 @@ async function run() {
   try {
     const token = (0,core.getInput)("github-token", { required: true });
     const geminiApiKey = (0,core.getInput)("gemini-api-key", { required: true });
-    const prompt = (0,core.getInput)("user-prompt");
+    const userPrompt = (0,core.getInput)("user-prompt");
+    const characterLimit = (0,core.getInput)("character-limit");
 
     const octokit = (0,github.getOctokit)(token);
 
@@ -33164,7 +33165,7 @@ async function run() {
 
     const { owner, repo } = github.context.repo;
     const { number } = github.context.payload.pull_request;
-    const commentBody = await geminiCall(geminiApiKey, prompt);
+    const commentBody = await geminiCall(geminiApiKey, userPrompt, characterLimit);
     await octokit.rest.issues.createComment({
       owner,
       repo,
@@ -33176,12 +33177,12 @@ async function run() {
   }
 }
 
-async function geminiCall(key, prompt) {
+async function geminiCall(key, userPrompt, characterLimit) {
   try {
     const genAI = new GoogleGenerativeAI(key);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent(`${userPrompt} in ${characterLimit} characters`);
 
     return result.response.text();
   } catch (error) {
