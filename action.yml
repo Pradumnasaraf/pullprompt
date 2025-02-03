@@ -13,10 +13,18 @@ inputs:
     description: 'A user-defined prompt for the comment'
     required: false
     default: 'Share an open-source tip in 2 to 3 lines to help developers improve their workflow'
+  gemini-model:
+    description: 'Model to use for the response. The default is gemini-1.5-flash'
+    required: false
+    default: "gemini-1.5-flash"
   character-limit:
     description: 'Character limit for the response'
     required: false
     default: "300"
+  output-language:
+    description: 'Output language for the response'
+    required: false
+    default: "english"
 
 runs:
   using: 'node20'
