@@ -65,7 +65,10 @@ jobs:
 
 ## Example  
 
-![Action demo screenshot](https://github.com/user-attachments/assets/3c88ab21-61a1-4fe7-b5ef-211c8e60e577)  
+![en](https://github.com/user-attachments/assets/929d1aaa-4bed-4a21-b2bc-f809c4f7960d)
+
+![jp](https://github.com/user-attachments/assets/94d69c65-5d6d-459a-8b5c-0750ccb3edbe)
+
 
 ## Contributing  
 
