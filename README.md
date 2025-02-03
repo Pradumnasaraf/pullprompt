@@ -4,13 +4,15 @@
 
 ## Usage  
 
-The Action takes three inputs:  
+The Action takes six inputs, some are required and some are optional:  
 
 1. **`github-token`** (Required) – The GitHub token used for authentication.  
    *"Share an open-source tip in 2 to 3 lines to help developers improve their workflow."* You can find this in the `action.yml` file.  
 2. **`gemini-api-key`** (Required) – The Gemini API key used for authentication and text generation. You can obtain it from the [Gemini API](https://ai.google.dev/gemini-api/docs/api-key) page.  
 3. **`user-prompt`** (Optional) – The prompt used to generate the text. The default is:  
-4. **`character-limit`** (Optional) – The character limit for the generated text. The default is 300.
+4. **`gemini-model`** (Optional) – The model used to generate the text. The default is: `gemini-1.5-flash`. We can use other Gemini models like `gemini-2.0-flash-exp`, `gemini-1.5-flash-8b`, `gemini-1.5-pro`, `gemini-1.0-pro`. A complete list of models can be found [here](https://ai.google.dev/gemini-api/docs/models/gemini).
+5. **`character-limit`** (Optional) – The character limit for the generated text. The default is 300.
+6. **`output-language`** (Optional) – The language of the generated text. The default is `english`.
 
 ### **Setting up the API Key**  
 Once you have the API key, add it to your repository secrets:  
@@ -51,11 +53,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Running PullPrompt
-        uses: Pradumnasaraf/pullprompt@v1.1.0
+        uses: Pradumnasaraf/pullprompt@v1.2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Required
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }} # Required
-          user-prompt: "Write your prompt here" # Optional
+          user-prompt: "How to become a better developer?" # Optional
+          gemini-model: "gemini-1.5-flash" # Optional
+          output-language: "spanish" # Optional
           character-limit: 450 # Optional
 ```
 
