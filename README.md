@@ -27,7 +27,10 @@ on:
 ```
 
 ### **Example Workflow**  
-Below is an example of how to use PullPrompt in a GitHub Actions workflow:  
+Below is an example of how to use PullPrompt in a GitHub Actions workflow:
+
+> [!IMPORTANT]  
+> Before using the below code, check the `pullprompt` action version in the `uses` field from the [GitHub Marketplace](https://github.com/marketplace/actions/pullprompt) for the latest version.
 
 ```yaml
 name: PullPrompt
@@ -48,7 +51,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Running PullPrompt
-        uses: Pradumnasaraf/pullprompt@v1.0.1
+        uses: Pradumnasaraf/pullprompt@v1.1.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Required
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }} # Required
