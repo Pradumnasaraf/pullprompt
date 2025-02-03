@@ -21,6 +21,7 @@
 - [ ] My code follows the code style of this project.
 - [ ] This PR does not contain plagiarized content.
 - [ ] The title of my pull request is a short description of the requested changes.
+- [ ] I have updated the README/documentation accordingly about the changes/features (if applicable).
 
 ### Note to reviewers
 
