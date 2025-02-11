@@ -10,7 +10,7 @@ async function run() {
     const characterLimit = getInput("character-limit");
     const outputLanguage = getInput("output-language");
     const geminiModel = getInput("gemini-model");
-    const modelTemperature = getInput("model-temperature");
+    const modelTemperature = getInput("model-temp");
 
     const octokit = getOctokit(token);
 
@@ -20,7 +20,14 @@ async function run() {
 
     const { owner, repo } = context.repo;
     const { number } = context.payload.pull_request;
-    const commentBody = await geminiCall(geminiApiKey, userPrompt, characterLimit, outputLanguage, geminiModel, modelTemperature);
+    const commentBody = await geminiCall(
+      geminiApiKey,
+      userPrompt,
+      characterLimit,
+      outputLanguage,
+      geminiModel,
+      modelTemperature
+    );
     await octokit.rest.issues.createComment({
       owner,
       repo,
@@ -39,17 +46,18 @@ async function geminiCall(geminiApiKey, userPrompt, characterLimit, outputLangua
 
     const result = await model.generateContent({
       contents: [
-          {
-            parts: [
-              {
-                text: userPrompt + " in " + outputLanguage + " in " + characterLimit + " characters."
-              }
-            ],
-          }
+        {
+          role: "user",
+          parts: [
+            {
+              text: userPrompt + " in " + outputLanguage + " in " + characterLimit + " characters.",
+            },
+          ],
+        },
       ],
       generationConfig: {
         temperature: modelTemperature,
-      }
+      },
     });
     return result.response.text();
   } catch (error) {
