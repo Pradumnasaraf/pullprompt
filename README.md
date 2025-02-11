@@ -11,7 +11,7 @@
 
 - **Model Selection**: Choose from a variety of models to generate the text.
 - **Model Temperature**: Set the temperature of the model to control the creativity of the text.
-- **Character Limit and Language**: Set the character limit and language of the generated text.
+- **Word Limit and Language**: Set the word limit and language of the generated text.
 
 ## Usage  
 
@@ -22,7 +22,7 @@ The Action multiple inputs, some are required and some are optional:
 2. **`gemini-api-key`** (Required) – The Gemini API key used for authentication and text generation. You can obtain it from the [Gemini API](https://ai.google.dev/gemini-api/docs/api-key) page.  
 3. **`user-prompt`** (Optional) – The prompt used to generate the text. The default is:  
 4. **`gemini-model`** (Optional) – The model used to generate the text. The default is: `gemini-1.5-flash`. We can use other Gemini models like `gemini-2.0-flash-exp`, `gemini-1.5-flash-8b`, `gemini-1.5-pro`, `gemini-1.0-pro`. A complete list of models can be found [here](https://ai.google.dev/gemini-api/docs/models/gemini).
-5. **`character-limit`** (Optional) – The character limit for the generated text. The default is 300.
+5. **`word-limit`** (Optional) – The word limit for the generated text. The default is 200.
 6. **`output-language`** (Optional) – The language of the generated text. The default is `english`.
 7. **`model-temp`** (Optional) – The temperature of the model. The default is 0.5. We can set the temperature between 0.1 to 1.0. The lower the temperature, the more deterministic the model will be. The higher the temperature, the more creative the model will be.
 
@@ -72,7 +72,7 @@ jobs:
           user-prompt: "How to become a better developer?" # Optional
           gemini-model: "gemini-1.5-flash" # Optional
           output-language: "spanish" # Optional
-          character-limit: 450 # Optional
+          word-limit: 250 # Optional
           model-temp: 0.5 # Optional
 ```
 

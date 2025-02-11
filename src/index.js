@@ -7,7 +7,7 @@ async function run() {
     const token = getInput("github-token", { required: true });
     const geminiApiKey = getInput("gemini-api-key", { required: true });
     const userPrompt = getInput("user-prompt");
-    const characterLimit = getInput("character-limit");
+    const wordLimit = getInput("word-limit");
     const outputLanguage = getInput("output-language");
     const geminiModel = getInput("gemini-model");
     const modelTemperature = getInput("model-temp");
@@ -23,7 +23,7 @@ async function run() {
     const commentBody = await geminiCall(
       geminiApiKey,
       userPrompt,
-      characterLimit,
+      wordLimit,
       outputLanguage,
       geminiModel,
       modelTemperature
@@ -39,7 +39,7 @@ async function run() {
   }
 }
 
-async function geminiCall(geminiApiKey, userPrompt, characterLimit, outputLanguage, geminiModel, modelTemperature) {
+async function geminiCall(geminiApiKey, userPrompt, wordLimit, outputLanguage, geminiModel, modelTemperature) {
   try {
     const genAI = new GoogleGenerativeAI(geminiApiKey);
     const model = genAI.getGenerativeModel({ model: geminiModel });
@@ -50,7 +50,7 @@ async function geminiCall(geminiApiKey, userPrompt, characterLimit, outputLangua
           role: "user",
           parts: [
             {
-              text: userPrompt + " in " + outputLanguage + " in " + characterLimit + " characters.",
+              text: userPrompt + " in " + outputLanguage + " in " + wordLimit + " words",
             },
           ],
         },
