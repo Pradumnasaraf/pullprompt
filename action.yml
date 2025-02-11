@@ -25,6 +25,10 @@ inputs:
     description: 'Output language for the response'
     required: false
     default: "english"
+  model-temp:
+    description: 'Temperature for the model'
+    required: false
+    default: "0.5"
 
 runs:
   using: 'node20'
