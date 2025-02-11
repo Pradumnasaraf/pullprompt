@@ -5,11 +5,17 @@
 
 ## About (PullPrompt)
 
-**PullPrompt** comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google’s Gemini API to generate the text.  
+**PullPrompt** comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google’s Gemini API to generate the text.
+
+## Features
+
+- **Model Selection**: Choose from a variety of models to generate the text.
+- **Model Temperature**: Set the temperature of the model to control the creativity of the text.
+- **Character Limit and Language**: Set the character limit and language of the generated text.
 
 ## Usage  
 
-The Action takes six inputs, some are required and some are optional:  
+The Action multiple inputs, some are required and some are optional:  
 
 1. **`github-token`** (Required) – The GitHub token used for authentication.  
    *"Share an open-source tip in 2 to 3 lines to help developers improve their workflow."* You can find this in the `action.yml` file.  
@@ -18,6 +24,7 @@ The Action takes six inputs, some are required and some are optional:
 4. **`gemini-model`** (Optional) – The model used to generate the text. The default is: `gemini-1.5-flash`. We can use other Gemini models like `gemini-2.0-flash-exp`, `gemini-1.5-flash-8b`, `gemini-1.5-pro`, `gemini-1.0-pro`. A complete list of models can be found [here](https://ai.google.dev/gemini-api/docs/models/gemini).
 5. **`character-limit`** (Optional) – The character limit for the generated text. The default is 300.
 6. **`output-language`** (Optional) – The language of the generated text. The default is `english`.
+7. **`model-temp`** (Optional) – The temperature of the model. The default is 0.5. We can set the temperature between 0.1 to 1.0. The lower the temperature, the more deterministic the model will be. The higher the temperature, the more creative the model will be.
 
 ### **Setting up the API Key**  
 Once you have the API key, add it to your repository secrets:  
@@ -66,6 +73,7 @@ jobs:
           gemini-model: "gemini-1.5-flash" # Optional
           output-language: "spanish" # Optional
           character-limit: 450 # Optional
+          model-temp: 0.5 # Optional
 ```
 
 ## Example  
@@ -73,7 +81,6 @@ jobs:
 ![en](https://github.com/user-attachments/assets/929d1aaa-4bed-4a21-b2bc-f809c4f7960d)
 
 ![jp](https://github.com/user-attachments/assets/94d69c65-5d6d-459a-8b5c-0750ccb3edbe)
-
 
 ## Contributing  
 
@@ -88,8 +95,6 @@ This project is licensed under the [GNU General Public License v3.0](LICENSE).
 ## Security  
 
 For information on reporting security vulnerabilities, please refer to the [Security Policy](SECURITY.md).  
-
-
 
 [release]: https://github.com/Pradumnasaraf/pullprompt/releases
 [release-badge]: https://img.shields.io/github/v/release/Pradumnasaraf/pullprompt
