@@ -17,10 +17,10 @@ inputs:
     description: 'Model to use for the response. The default is gemini-1.5-flash'
     required: false
     default: "gemini-1.5-flash"
-  character-limit:
-    description: 'Character limit for the response'
+  word-limit:
+    description: 'Word limit for the response'
     required: false
-    default: "300"
+    default: "200"
   output-language:
     description: 'Output language for the response'
     required: false
