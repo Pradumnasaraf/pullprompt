@@ -22,6 +22,7 @@
 - [ ] I have read the [CONTRIBUTING.md]([../CONTRIBUTING.md](https://github.com/Pradumnasaraf/pullprompt/blob/main/CONTRIBUTING.md)) document and I have an assigned issue to work on the changes outgoing via this PR.
 - [ ] The title of my pull request is a short description of the requested changes.
 - [ ] I have updated the README/documentation accordingly about the changes/features (if applicable).
+- [ ] Update the Action examples in the README if the changes are related to the Action (fixes, features, etc).
 
 ### Note to reviewers
 
