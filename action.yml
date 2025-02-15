@@ -14,9 +14,9 @@ inputs:
     required: false
     default: 'Share an open-source tip in 2 to 3 lines to help developers improve their workflow'
   gemini-model:
-    description: 'Model to use for the response. The default is gemini-1.5-flash'
+    description: 'Model to use for the response. The default is gemini-2.0-flash'
     required: false
-    default: "gemini-1.5-flash"
+    default: "gemini-2.0-flash"
   word-limit:
     description: 'Word limit for the response'
     required: false
