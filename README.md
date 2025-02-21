@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Running PullPrompt
-        uses: Pradumnasaraf/pullprompt@v1.3.1
+        uses: Pradumnasaraf/pullprompt@v1.3.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Required
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }} # Required
