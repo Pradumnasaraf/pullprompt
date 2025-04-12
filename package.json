@@ -5,19 +5,27 @@
   "scripts": {
     "build": "npx ncc build src/index.js",
     "prepare": "husky install",
-    "format": "prettier --write **/*.js"
+    "format": "prettier --write '**/*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pradumnasaraf/GHA.git"
+    "url": "git+https://github.com/Pradumnasaraf/pullprompt.git"
   },
   "author": "Pradumnasaraf",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Pradumnasaraf/GHA/issues"
+    "url": "https://github.com/Pradumnasaraf/pullprompt/issues"
   },
-  "homepage": "https://github.com/Pradumnasaraf/GHA#readme",
-  "description": "",
+  "homepage": "https://github.com/Pradumnasaraf/pullprompt#readme",
+  "description": "PullPrompt is a GitHub Action that comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google’s Gemini API to generate the text.",
+  "keywords": [
+    "github",
+    "action",
+    "google",
+    "gemini",
+    "pullrequest",
+    "comment"
+  ],
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0",
