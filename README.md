@@ -21,7 +21,7 @@ The Action multiple inputs, some are required and some are optional:
    *"Share an open-source tip in 2 to 3 lines to help developers improve their workflow."* You can find this in the `action.yml` file.  
 2. **`gemini-api-key`** (Required) – The Gemini API key used for authentication and text generation. You can obtain it from the [Gemini API](https://ai.google.dev/gemini-api/docs/api-key) page.  
 3. **`user-prompt`** (Optional) – The prompt used to generate the text. The default is:  
-4. **`gemini-model`** (Optional) – The model used to generate the text. The default is: `gemini-2.0-flash`. We can use other Gemini models like `gemini-1.5-flash`, `gemini-1.5-flash-8b`, `gemini-1.5-pro`, `gemini-1.0-pro`. A complete list of models can be found [here](https://ai.google.dev/gemini-api/docs/models/gemini).
+4. **`gemini-model`** (Optional) – The model used to generate the text. The default is: `gemini-2.5-pro`. We can use other Gemini models like `gemini-2.5-flash`, `gemini-2.5-flash-lite`, `gemini-2.0-flash`, `gemini-2.0-flash-lite`. A complete list of models can be found [here](https://ai.google.dev/gemini-api/docs/models/gemini).
 5. **`word-limit`** (Optional) – The word limit for the generated text. The default is 200.
 6. **`output-language`** (Optional) – The language of the generated text. The default is `english`.
 7. **`model-temp`** (Optional) – The temperature of the model. The default is 0.5. We can set the temperature between 0.1 to 1.0. The lower the temperature, the more deterministic the model will be. The higher the temperature, the more creative the model will be.
@@ -65,12 +65,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Running PullPrompt
-        uses: Pradumnasaraf/pullprompt@v1.3.2
+        uses: Pradumnasaraf/pullprompt@v1.4.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Required
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }} # Required
           user-prompt: "How to become a better developer?" # Optional
-          gemini-model: "gemini-2.0-flash" # Optional
+          gemini-model: "gemini-2.5-pro" # Optional
           output-language: "spanish" # Optional
           word-limit: 250 # Optional
           model-temp: 0.5 # Optional
