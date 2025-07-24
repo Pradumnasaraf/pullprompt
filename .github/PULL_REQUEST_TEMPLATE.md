@@ -23,6 +23,7 @@
 - [ ] The title of my pull request is a short description of the requested changes.
 - [ ] I have updated the README/documentation accordingly about the changes/features (if applicable).
 - [ ] Update the Action examples in the README if the changes are related to the Action (fixes, features, etc).
+- [ ] Update the code snippet Action version in the README if the changes are related to the Action (fixes, features, etc).
 
 ### Note to reviewers
 
