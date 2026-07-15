@@ -1,6 +1,6 @@
 import { getInput, setFailed } from "@actions/core";
 import { context, getOctokit } from "@actions/github";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
 async function run() {
   try {
@@ -41,25 +41,16 @@ async function run() {
 
 async function geminiCall(geminiApiKey, userPrompt, wordLimit, outputLanguage, geminiModel, modelTemperature) {
   try {
-    const genAI = new GoogleGenerativeAI(geminiApiKey);
-    const model = genAI.getGenerativeModel({ model: geminiModel });
+    const ai = new GoogleGenAI({ apiKey: geminiApiKey });
 
-    const result = await model.generateContent({
-      contents: [
-        {
-          role: "user",
-          parts: [
-            {
-              text: userPrompt + " in " + outputLanguage + " in " + wordLimit + " words",
-            },
-          ],
-        },
-      ],
-      generationConfig: {
-        temperature: modelTemperature,
+    const result = await ai.models.generateContent({
+      model: geminiModel,
+      contents: userPrompt + " in " + outputLanguage + " in " + wordLimit + " words",
+      config: {
+        temperature: Number(modelTemperature),
       },
     });
-    return result.response.text();
+    return result.text;
   } catch (error) {
     setFailed("Error generating content with Gemini:", error);
     return "An error occurred while generating content.";
