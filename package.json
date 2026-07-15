@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx ncc build src/index.js",
-    "prepare": "husky install",
+    "prepare": "husky",
     "format": "prettier --write '**/*.js'"
   },
   "repository": {
@@ -27,17 +27,17 @@
     "comment"
   ],
   "dependencies": {
-    "@actions/core": "^1.11.1",
-    "@actions/github": "^6.0.0",
-    "@google/generative-ai": "^0.21.0"
+    "@actions/core": "^3.0.1",
+    "@actions/github": "^9.1.1",
+    "@google/genai": "^2.11.0"
   },
   "type": "module",
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "@vercel/ncc": "^0.38.3",
-    "globals": "^15.14.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.4.2"
+    "@eslint/js": "^10.0.1",
+    "@vercel/ncc": "^0.44.1",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.5"
   }
 }
